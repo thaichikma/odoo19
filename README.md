@@ -9,7 +9,7 @@ Dockerdoo is integrated with **VSCode** for fast development and debugging, just
 
 ## Pre-built Images
 
-Pre-built images for various Odoo versions (`15.0`, `16.0`, `17.0`, `18.0`, `master`) and architectures (`linux/amd64`, `linux/arm64`) are automatically built, tested, and published via GitHub Actions to:
+Pre-built images for various Odoo versions (`15.0`, `16.0`, `17.0`, `18.0`, `19.0`) and architectures (`linux/amd64`, `linux/arm64`) are automatically built, tested, and published via GitHub Actions to:
 
 - **GitHub Container Registry**: `ghcr.io/iterativo-git/dockerdoo:<odoo_version>` (e.g., `ghcr.io/iterativo-git/dockerdoo:17.0`)
 - **Docker Hub**: `iterativodo/dockerdoo:<odoo_version>`
