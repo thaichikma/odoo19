@@ -189,10 +189,6 @@ your-project/
 
 ## Credits
 
-Mainly based on dockery-odoo work by:
-
-- [David Arnold](https://github.com/blaggacao) ([XOE Solutions](https://xoe.solutions))
-
 Bunch of ideas taken from:
 
 - [Odoo](https://github.com/odoo) ([docker](https://github.com/odoo/docker))
