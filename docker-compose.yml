@@ -20,17 +20,19 @@ services:
     volumes:
       # Host paths (.ssh configuration)
       - ~/.ssh/:/opt/odoo/.ssh/:cached
+      # Config file
+      - ./config/odoo.conf:/etc/odoo/odoo.conf:cached
       # Named volumes
       - odoo-data:${ODOO_DATA_DIR}
       - odoo-testlogs:${ODOO_LOGS_DIR}
-      - odoo-modules:${ODOO_EXTRA_ADDONS}
-      - ./custom/enterprise:/mnt/extra-addons/enterprise
+      - ./custom:${ODOO_EXTRA_ADDONS}
+      #- ./custom/enterprise:/mnt/extra-addons/enterprise
     depends_on:
       db:
         condition: service_healthy
   # ------------------------
   db:
-    image: postgres:${PSQL_VERSION}
+    image: pgvector/pgvector:pg16
     restart: always
     volumes:
       - psql:/var/lib/postgresql/data/pgdata
